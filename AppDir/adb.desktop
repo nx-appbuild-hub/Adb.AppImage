@@ -1,0 +1,75 @@
+# This file is part of the LibreOffice project.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+#
+# This file incorporates work covered by the following license notice:
+#
+#   Licensed to the Apache Software Foundation (ASF) under one or more
+#   contributor license agreements. See the NOTICE file distributed
+#   with this work for additional information regarding copyright
+#   ownership. The ASF licenses this file to you under the Apache
+#   License, Version 2.0 (the "License"); you may not use this file
+#   except in compliance with the License. You may obtain a copy of
+#   the License at http://www.apache.org/licenses/LICENSE-2.0 .
+#
+
+[Desktop Entry]
+Name=adb
+GenericName=Android Debug Bridge
+Terminal=false
+NoDisplay=false
+Type=Application
+Categories=Development;Utility;
+Exec=AppRun %U
+Comment=Android Debug Bridge to debug various parts of their applications or the system
+StartupWMClass=adb
+Actions=dmtracedump;e2fsdroid;etc1tool;fastboot;hprof-conv;make_f2fs;mke2fs;sload_f2fs;sqlite3;
+Icon=adb
+
+[Desktop Action dmtracedump]
+Name=dmtracedump
+Exec=AppRun --dmtracedump %U
+StartupNotify=false
+
+[Desktop Action e2fsdroid]
+Name=e2fsdroid
+Exec=AppRun --e2fsdroid
+StartupNotify=false
+
+[Desktop Action etc1tool]
+Name=etc1tool
+Exec=AppRun --etc1tool
+StartupNotify=false
+
+[Desktop Action fastboot]
+Name=Draw
+Exec=AppRun --fastboot
+StartupNotify=false
+
+[Desktop Action hprof-conv]
+Name=hprof-conv
+Exec=AppRun --hprof-conv
+StartupNotify=false
+
+[Desktop Action make_f2fs]
+Name=Math
+Exec=AppRun --make_f2fs
+StartupNotify=false
+
+[Desktop Action mke2fs]
+Name=Math
+Exec=AppRun --mke2fs
+StartupNotify=false
+
+[Desktop Action sload_f2fs]
+Name=Math
+Exec=AppRun --sload_f2fs
+StartupNotify=false
+
+
+[Desktop Action sqlite3]
+Name=Math
+Exec=AppRun --sqlite3
+StartupNotify=false

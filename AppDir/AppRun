@@ -1,0 +1,37 @@
+#! /bin/bash
+# This software is a part of the A.O.D apprepo project
+# Copyright 2020 Alex Woroschilow (alex.woroschilow@gmail.com)
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+PATH=${PATH}:${APPDIR}/application
+export PATH=${PATH}
+
+LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${APPDIR}/application/lib64
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}
+
+cd ${OWD}
+
+case "$1" in
+  '--dmtracedump') exec ${APPDIR}/application/dmtracedump "${@:2}" ;;
+  '--e2fsdroid')   exec ${APPDIR}/application/e2fsdroid "${@:2}" ;;
+  '--etc1tool')   exec ${APPDIR}/application/etc1tool "${@:2}" ;;
+  '--fastboot')   exec ${APPDIR}/application/fastboot "${@:2}" ;;
+  '--hprof-conv')   exec ${APPDIR}/application/hprof-conv "${@:2}" ;;
+  '--make_f2fs')   exec ${APPDIR}/application/make_f2fs "${@:2}" ;;
+  '--mke2fs')   exec ${APPDIR}/application/mke2fs "${@:2}" ;;
+  '--sload_f2fs')   exec ${APPDIR}/application/sload_f2fs "${@:2}" ;;
+  '--sqlite3')   exec ${APPDIR}/application/sqlite3 "${@:2}" ;;
+  *)   exec ${APPDIR}/application/adb "$@" ;;
+esac
