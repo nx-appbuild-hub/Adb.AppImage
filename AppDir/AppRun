@@ -33,5 +33,6 @@ case "$1" in
   '--mke2fs')   exec ${APPDIR}/application/mke2fs "${@:2}" ;;
   '--sload_f2fs')   exec ${APPDIR}/application/sload_f2fs "${@:2}" ;;
   '--sqlite3')   exec ${APPDIR}/application/sqlite3 "${@:2}" ;;
+  '--sqlite')   exec ${APPDIR}/application/sqlite3 "${@:2}" ;;
   *)   exec ${APPDIR}/application/adb "$@" ;;
 esac
