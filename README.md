@@ -27,3 +27,5 @@ to run adb sqlite3: ./Adb.AppImage --sqlite3
 
 
 
+
+![example workflow](https://github.com/nx-appbuild-hub/Adb.AppImage//actions/workflows/makefile.yml/badge.svg)
